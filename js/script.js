@@ -8,7 +8,7 @@ let numbers = [];
 
 const grid = document.querySelector(".grid")
 
-for (let i = 0; i <= 100; i++){
+for (let i = 1; i <= 100; i++){
     numbers = i
     console.log(numbers);
 
@@ -16,7 +16,7 @@ for (let i = 0; i <= 100; i++){
     let square = createSquare(numbers);
 
     // metto il risultato nell html
-    grid.append(numbers)
+    grid.append(square)
 }
 // verificare l'arrasy
 
