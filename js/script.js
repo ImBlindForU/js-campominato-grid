@@ -6,29 +6,29 @@
 const grid = document.querySelector(".grid")
 
 
-let btn = document.getElementsByTagName("button")
+let btn = document.getElementById("btn")
 console.log(btn)
 btn.addEventListener("click", function(){
-    alert("ciao")
+    for (let i = 1; i <= 100; i++){
+        numbers = i
+        console.log(numbers);
+    
+        // creo uno square per ogni numero
+        let square = createSquare(numbers);
+    
+    
+        // aggiungo un eventlistener
+        square.addEventListener("click", squareClick);
+       
+        // metto il risultato nell html
+        grid.append(square)
+    }
 })
-alert(ciao)
+
 // aggiungo eventlistener 
 
 
-for (let i = 1; i <= 100; i++){
-    numbers = i
-    console.log(numbers);
 
-    // creo uno square per ogni numero
-    let square = createSquare(numbers);
-
-
-    // aggiungo un eventlistener
-    square.addEventListener("click", squareClick);
-   
-    // metto il risultato nell html
-    grid.append(square)
-}
 // verificare l'arrasy
 
 
@@ -49,5 +49,6 @@ function createSquare(numbers){
 
 function squareClick(){
     this.classList.add("blue")
+    
 }
 
