@@ -9,6 +9,7 @@ const grid = document.querySelector(".grid")
 let btn = document.getElementById("btn")
 console.log(btn)
 btn.addEventListener("click", function(){
+    grid.innerHTML = "";
     for (let i = 1; i <= 100; i++){
         numbers = i
         console.log(numbers);
@@ -18,7 +19,10 @@ btn.addEventListener("click", function(){
     
     
         // aggiungo un eventlistener
-        square.addEventListener("click", squareClick);
+        square.addEventListener("click", function squareClick(){
+            this.classList.add("blue")
+            console.log(this)
+        });
        
         // metto il risultato nell html
         grid.append(square)
@@ -47,8 +51,5 @@ function createSquare(numbers){
 
 // aggiungere un div quando viene cliccato uno square
 
-function squareClick(){
-    this.classList.add("blue")
-    
-}
+
 
